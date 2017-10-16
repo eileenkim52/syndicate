@@ -10,7 +10,7 @@ from urllib2 import urlopen
 
 SERVER_IP = urlopen('http://ip.42.pl/raw').read()
 NODE_LIST = urlopen('https://pastebin.com/raw/p5r7zdaX').read()
-BOOTSTRAP_URL = "https://transfer.sh/13BiaI/Syndicate_blockchain_2017_09_28.zip"
+BOOTSTRAP_URL = "file:///C:/Users/%EA%B9%80%ED%98%95%EC%A7%84/Desktop/blockchain_1.9.1/"
 
 DEFAULT_COLOR = "\x1b[0m"
 PRIVATE_KEYS = []
@@ -131,7 +131,7 @@ def compile_wallet():
     if is_compile:
         print_info("Downloading wallet...")
         run_command("rm -rf /opt/SyndicateQT")
-        run_command("git clone https://github.com/SyndicateLabs/SyndicateQT /opt/SyndicateQT")
+        run_command("git clone https://github.com/SyndicateLtd/SyndicateQT /opt/SyndicateQT")
         
         print_info("Compiling wallet...")
         run_command("chmod +x /opt/SyndicateQT/src/leveldb/build_detect_platform")
